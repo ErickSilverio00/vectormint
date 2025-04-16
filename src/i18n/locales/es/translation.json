@@ -1,0 +1,85 @@
+{
+    "home": {
+        "heroSection": {
+            "titlePart1": "Transforma tus imágenes en",
+            "titlePart2": "Arte Vectorial",
+            "description": "Convierte imágenes al formato vectorial SVG en segundos, sin pérdida de calidad y ¡totalmente gratis!",
+            "blockTitle1": "Arrastra y suelta tu imagen aquí",
+            "blockTitle2": "o haz clic para seleccionar un archivo",
+            "blockButton": "Seleccionar Imagen",
+            "tip": "Descubre cómo funciona"
+        },
+        "howItWorksSection": {
+            "titlePart1": "Cómo",
+            "titlePart2": "Funciona",
+            "description": "Transformar tus imágenes en vectores nunca fue tan simple y rápido. Solo tres pasos y tendrás tu arte vectorial listo.",
+            "cardTitle1": "Carga tu imagen",
+            "cardDescription1": "Arrastra y suelta o selecciona cualquier imagen de tu dispositivo. Admite JPG, JPEG, PNG, WebP y BMP.",
+            "cardTitle2": "Elige el tipo de conversión",
+            "cardDescription2": "Nuestra herramienta convierte tus imágenes en arte vectorial en formato SVG con calidad profesional.",
+            "cardTitle3": "Descarga tu SVG",
+            "cardDescription3": "Obtén tu archivo SVG listo para ser usado en diseños, sitios web o impresión."
+        },
+        "gallerySection": {
+            "titlePart1": "Galería de ",
+            "titlePart2": "Ejemplos",
+            "description": "Ve el poder de nuestra herramienta de vectorización a través de estos ejemplos antes y después.",
+            "cardTitle1": "Logo Empresarial",
+            "cardDescription1": "Logo corporativo vectorizado con líneas nítidas.",
+            "cardTitle2": "Ícono Simple",
+            "cardDescription2": "Ícono vectorizado, manteniendo el diseño claro y preciso.",
+            "cardTitle3": "Imagen Creativa",
+            "cardDescription3": "Transformación vectorial de una imagen con enfoque en estilo artístico y detalles personalizados."
+        },
+        "faqSection": {
+            "titlePart1": "Preguntas",
+            "titlePart2": "Frecuentes",
+            "description": "Encuentra respuestas a las dudas más comunes sobre nuestra herramienta de vectorización.",
+            "question1": "¿Qué es el arte vectorial?",
+            "answer1": "El arte vectorial es un tipo de gráfico digital que utiliza fórmulas matemáticas para renderizar imágenes. A diferencia de las imágenes bitmap (rasterizadas), que están hechas de píxeles, el arte vectorial usa rutas matemáticas, lo que significa que puede ampliarse infinitamente sin perder calidad.",
+            "question2": "¿Qué tipos de imágenes puedo vectorizar?",
+            "answer2": "Puedes vectorizar casi cualquier imagen, pero los mejores resultados se obtienen con imágenes que tienen líneas claras y contrastes bien definidos. Logos, íconos, ilustraciones y dibujos simples funcionan muy bien. Fotografías complejas pueden ser vectorizadas, pero el resultado puede ser más estilizado.",
+            "question3": "¿En qué formatos puedo descargar mi arte vectorizada?",
+            "answer3": "Actualmente ofrecemos la descarga en formato SVG (Scalable Vector Graphics), que es ampliamente compatible con programas de diseño como Adobe Illustrator, Figma, Inkscape y otros. También puedes usar el SVG directamente en sitios web.",
+            "question4": "¿El servicio es realmente gratuito?",
+            "answer4": "¡Sí! El servicio de vectorización es completamente gratuito, sin marcas de agua ni limitaciones en las imágenes descargadas.",
+            "question5": "¿Cómo puedo editar el archivo SVG después de descargarlo?",
+            "answer5": "Puedes editar el archivo SVG en cualquier software de diseño vectorial como Adobe Illustrator, CorelDRAW, Inkscape (gratis), o herramientas en línea como Figma. Estos programas te permiten modificar colores, tamaños, formas y otros aspectos de tu archivo.",
+            "question6": "¿Mis imágenes son almacenadas en sus servidores?",
+            "answer6": "No. Todo el procesamiento se realiza directamente en tu navegador, de manera local. Tus imágenes nunca se envían a nuestros servidores, garantizando total privacidad y seguridad."
+        }
+    },
+    "upload": {
+        "noSvgBlockTitle1": "Arrastra y suelta tu imagen aquí",
+        "noSvgBlockTitle2": "o haz clic para seleccionar un archivo",
+        "noSvgBlockButton": "Seleccionar Imagen",
+        "button1": "Color del SVG",
+        "button2": "Acercar",
+        "button3": "Alejar",
+        "button4Opt1": "Ver Imagen Original",
+        "button4Opt2": "Ver SVG Generado",
+        "button5": "Nueva Imagen",
+        "button6": "Descargar SVG"
+    },
+    "header": {
+        "option1": "Cómo funciona",
+        "option2": "Galería",
+        "option3": "FAQ"
+    },
+    "footer": {
+        "description": "Transforma tus logos en arte vectorial de forma fácil y gratuita. Nuestra herramienta de vectorización automática entrega SVGs de alta calidad en segundos.",
+        "shorDescriptionLeft1": "Hecho con",
+        "shorDescriptionLeft2": "en Brasil",
+        "title1": "Enlaces Rápidos",
+        "title2": "Contáctame",
+        "optionId1": "Inicio",
+        "optionId2": "Cómo funciona",
+        "optionId3": "Galería",
+        "optionId4": "FAQ",
+        "copyright1": "Hecho por",
+        "copyright2": ". Todos los derechos reservados ©"
+    },
+    "holdImage": {
+        "description": "Suelta la imagen en cualquier lugar"
+    }
+}
