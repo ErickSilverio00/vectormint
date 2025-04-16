@@ -13,11 +13,13 @@ import React, {
 import { toast } from "sonner";
 import { UploadInterface } from "./types";
 import { useNavigate } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
 const UploadContext = createContext<UploadInterface>({} as UploadInterface);
 
 export const UploadProvider = ({ children }: { children: ReactNode }) => {
   const navigate = useNavigate();
+  const { t } = useTranslation();
   const {
     setIsDragging,
     setSelectedImage,
@@ -94,11 +96,9 @@ export const UploadProvider = ({ children }: { children: ReactNode }) => {
   };
 
   const processFile = async (file: File) => {
-    const allowedTypes = ["image/jpeg", "image/png", "image/webp", "image/bmp"];
+    const allowedTypes = ["image/jpeg", "image/png", "image/png"];
     if (!file.type || !allowedTypes.includes(file.type)) {
-      toast.error(
-        "Tipo de arquivo inválido. Envie uma imagem PNG, JPG, JPEG, WebP ou BMP."
-      );
+      toast.error(t("toasts.invalidTypeImage"));
       return;
     }
 
@@ -114,7 +114,7 @@ export const UploadProvider = ({ children }: { children: ReactNode }) => {
       setIsComplete(true);
       navigate("/upload");
     } catch (error) {
-      toast.error(`Erro ao vetorizar: ${error}`);
+      toast.error(`${t("toasts.genericError")} ${error}`);
     } finally {
       setIsProcessing(false);
     }
@@ -142,7 +142,7 @@ export const UploadProvider = ({ children }: { children: ReactNode }) => {
 
   const handleDownload = () => {
     if (!svgData) {
-      toast.error("Nenhum SVG para baixar.");
+      toast.error(t("toasts.noSvg"));
       return;
     }
 

@@ -1,54 +1,127 @@
-# React + TypeScript + Vite
+# Vectormint — Image to SVG Converter for Logos
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Transform raster images into clean, scalable SVGs — remove backgrounds, adjust colors, and optimize logos with ease.
 
-Currently, two official plugins are available:
+![Vectormint Demo](./demo.gif)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Features
 
-## Expanding the ESLint configuration
+- 🪄 **Auto Background Removal**
+- 🎨 **Color Customization**
+- ⚙️ **High-Precision SVG Conversion**
+- 📁 **Support for PNG, JPG, JPEG**
+- ⚡ **Fast, client-side processing**
+- 🔒 **No uploads — all in-browser**
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+---
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+## 🛠️ Technologies
+
+- **Vite** - Fast, modern build tool
+- **TailwindCSS** - Utility-first CSS framework
+- **Shadcn** - UI component library
+- **Zustand** - Simple state management
+- **Lucide-react** - Icon library for React
+- **i18n** - Internationalization for language support
+
+---
+
+## 📦 Installation
+
+Clone the repository and install dependencies:
+
+```bash
+git clone https://github.com/ErickSilverio00/vectormint.git
+cd vectormint
+npm install
+npm run dev
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+---
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## ✨ Usage
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+- **Upload an image** - (PNG, JPG, JPEG)
+- **Background Removal** - happens automatically using an efficient algorithm
+- **Customize Colors** - to match your brand
+- **Download the SVG** - and use it for your logo or graphic design
+
+---
+
+## 📊 Analytics
+
+We track the number of image conversions to improve our platform. This data is anonymous and doesn't collect any personal information.
+
+**Firebase Analytics** is used for this purpose.
+
+---
+
+## 🤝 Contributing
+
+We welcome contributions!  
+To contribute:
+
+1. Fork the repository.
+2. Create a feature branch (`git checkout -b feature-branch`).
+3. Commit your changes (`git commit -m 'Add new feature'`).
+4. Push to the branch (`git push origin feature-branch`).
+5. Open a Pull Request to the main repository.
+
+---
+
+## 📄 License
+
+This project is licensed under the **MIT License**. See the [LICENSE](./LICENSE) file for more information.
+
+---
+
+## 🧠 Inspiration
+
+Vectormint is designed for designers, developers, and entrepreneurs who need to quickly convert raster images into clean, vectorized logos. It's an easy-to-use platform with powerful background removal and color customization features, all powered by client-side technology.
+
+---
+
+## 🌐 Live Demo
+
+Explore the demo of Vectormint here:
+
+🔗 [Live Demo](https://vectormint.vercel.app)
+
+---
+
+## 📣 Links
+
+- **GitHub Repository:** [https://github.com/ErickSilverio00/vectormint](https://github.com/ErickSilverio00/vectormint)
+- **Live Website:** [https://vectormint.vercel.app](https://vectormint.vercel.app)
+- **Contact Email:** [ericksilverio39@gmail.com](mailto:ericksilverio39@gmail.com)
+
+---
+
+## 🗣️ Translation Support
+
+Vectormint supports multiple languages via **i18n**. At the moment, the platform supports:
+
+- **English** 🇬🇧
+- **Portuguese** 🇧🇷
+- **Spanish** 🇪🇸
+
+Feel free to submit translations or improve the existing ones through our GitHub repository.
+
+---
+
+## 👾 Issues
+
+If you encounter any bugs or have suggestions for improvements, please open an issue in the [GitHub Issues](https://github.com/ErickSilverio00/vectormint/issues) section.
+
+---
+
+## 🌍 Social Media
+
+Follow us for updates, tips, and tutorials:
+
+- **Twitter:** [@ericksilverioo00](https://twitter.com/ericksilverioo00)
+- **LinkedIn:** [Erick Silvério](https://www.linkedin.com/in/erick-silv%C3%A9rio-024576248/)
+
+---
+
+Thank you for checking out Vectormint! Happy converting!

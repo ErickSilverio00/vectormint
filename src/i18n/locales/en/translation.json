@@ -14,7 +14,7 @@
             "titlePart2": "It Works",
             "description": "Turning your images into vectors has never been so simple and fast. Just three steps, and you'll have your vector art ready.",
             "cardTitle1": "Upload your image",
-            "cardDescription1": "Drag and drop or select any image from your device. Supports JPG, JPEG, PNG, WebP, and BMP.",
+            "cardDescription1": "Drag and drop or select any image from your device. Supports JPG, JPEG and PNG",
             "cardTitle2": "Choose the conversion type",
             "cardDescription2": "Our tool transforms your images into vector art in SVG format with professional quality.",
             "cardTitle3": "Download your SVG",
@@ -81,5 +81,10 @@
     },
     "holdImage": {
         "description": "Drop the image anywhere"
+    },
+    "toasts": {
+        "noSvg": "No SVG to download",
+        "genericError": "Error while vectorizing:",
+        "invalidTypeImage": "Invalid file type. Please upload a PNG, JPG, or JPEG image."
     }
 }

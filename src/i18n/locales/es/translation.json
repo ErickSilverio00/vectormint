@@ -14,7 +14,7 @@
             "titlePart2": "Funciona",
             "description": "Transformar tus imágenes en vectores nunca fue tan simple y rápido. Solo tres pasos y tendrás tu arte vectorial listo.",
             "cardTitle1": "Carga tu imagen",
-            "cardDescription1": "Arrastra y suelta o selecciona cualquier imagen de tu dispositivo. Admite JPG, JPEG, PNG, WebP y BMP.",
+            "cardDescription1": "Arrastra y suelta o selecciona cualquier imagen de tu dispositivo. Admite JPG, JPEG y PNG.",
             "cardTitle2": "Elige el tipo de conversión",
             "cardDescription2": "Nuestra herramienta convierte tus imágenes en arte vectorial en formato SVG con calidad profesional.",
             "cardTitle3": "Descarga tu SVG",
@@ -81,5 +81,10 @@
     },
     "holdImage": {
         "description": "Suelta la imagen en cualquier lugar"
+    },
+    "toasts": {
+        "noSvg": "no hay archivos SVG para descargar",
+        "genericError": "Error al vectorizar:",
+        "invalidTypeImage": "Tipo de archivo no válido. Sube una imagen PNG, JPG o JPEG."
     }
 }
