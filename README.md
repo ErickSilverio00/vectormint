@@ -48,14 +48,6 @@ npm run dev
 
 ---
 
-## 📊 Analytics
-
-We track the number of image conversions to improve our platform. This data is anonymous and doesn't collect any personal information.
-
-**Firebase Analytics** is used for this purpose.
-
----
-
 ## 🤝 Contributing
 
 We welcome contributions!  
