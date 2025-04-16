@@ -1,9 +1,9 @@
 import { useTranslation } from "react-i18next";
-import BusinessImagePng from "@/assets/business-image.jpg";
+import BusinessImageJpg from "@/assets/business-image.jpg";
 import BusinessImageSvg from "@/assets/business-image-vectormint.svg";
-import SimpleIconPng from "@/assets/simple-icon.png";
+import SimpleIconJpg from "@/assets/simple-icon.jpg";
 import SimpleIconSvg from "@/assets/simple-icon-vectormint.svg";
-import ArtisticImagePng from "@/assets/artistic-image.jpg";
+import ArtisticImageJpg from "@/assets/artistic-image.jpg";
 import ArtisticImageSvg from "@/assets/artistic-image-vectormint.svg";
 
 const GallerySection = () => {
@@ -13,21 +13,21 @@ const GallerySection = () => {
     {
       id: 1,
       title: `${t("home.gallerySection.cardTitle1")}`,
-      beforeImg: BusinessImagePng,
+      beforeImg: BusinessImageJpg,
       afterImg: BusinessImageSvg,
       description: `${t("home.gallerySection.cardDescription1")}`,
     },
     {
       id: 2,
       title: `${t("home.gallerySection.cardTitle2")}`,
-      beforeImg: SimpleIconPng,
+      beforeImg: SimpleIconJpg,
       afterImg: SimpleIconSvg,
       description: `${t("home.gallerySection.cardDescription2")}`,
     },
     {
       id: 3,
       title: `${t("home.gallerySection.cardTitle3")}`,
-      beforeImg: ArtisticImagePng,
+      beforeImg: ArtisticImageJpg,
       afterImg: ArtisticImageSvg,
       description: `${t("home.gallerySection.cardDescription3")}`,
     },

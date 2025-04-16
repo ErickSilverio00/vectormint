@@ -123,7 +123,7 @@ const Upload = () => {
                       </Label>
                     </div>
                   </div>
-                  <div className="flex flex-col w-[344px] h-[344px] border rounded-3xl overflow-hidden">
+                  <div className="flex flex-col sm:w-[344px] w-full h-[344px] border rounded-3xl overflow-hidden">
                     {isSvg && (
                       <div
                         className="flex-1 flex justify-center items-center p-2 overflow-auto animate-revealRight"
@@ -160,7 +160,7 @@ const Upload = () => {
                         <img
                           src={selectedImage}
                           alt="Imagem carregada"
-                          className="w-[344px] h-[344px] object-contain animate-revealLeft"
+                          className="object-contain animate-revealLeft"
                         />
                       </div>
                     )}
@@ -168,7 +168,7 @@ const Upload = () => {
                 </div>
               )}
 
-              <div className="flex sm:flex-col flex-rol gap-4 relative">
+              <div className="flex sm:flex-col flex-rol gap-4 sm:justify-start justify-between relative">
                 <div className="flex sm:flex-row flex-col items-center gap-2 text-center">
                   <label className="relative">
                     <input
