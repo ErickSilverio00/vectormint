@@ -68,7 +68,7 @@ const Footer = () => {
             <h4 className="font-semibold mb-4">{t("footer.title2")}</h4>
             <div className="flex space-x-4">
               <a
-                href="#"
+                href="https://twitter.com/ericksilverio00"
                 className="text-muted-foreground hover:text-primary transition-colors"
               >
                 <Twitter size={20} />

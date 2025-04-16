@@ -83,7 +83,7 @@ const Header = () => {
           </a>
 
           <Select
-            value={i18n.language}
+            value={i18n.language || "pt"}
             onValueChange={(val) => changeLanguage(val)}
           >
             <SelectTrigger className="w-[180px]">
