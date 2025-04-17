@@ -169,7 +169,7 @@ const Upload = () => {
               )}
 
               <div className="flex md:flex-col flex-rol gap-4 md:justify-start justify-between w-full">
-                <div className="flex md:flex-col flex-row items-center justify-between gap-4 h-full w-full">
+                <div className="flex md:flex-col flex-row justify-between gap-4 h-full w-full">
                   <div className="flex md:flex-row flex-col items-center gap-2 text-center">
                     <label className="relative">
                       <input
