@@ -123,7 +123,7 @@ const Upload = () => {
                       </Label>
                     </div>
                   </div>
-                  <div className="flex flex-col w-full md:w-[50dvw] lg:w-[35dvw] xl:w-[30dvw] h-[calc(100dvh-300px)] md:h-[55dvh] border rounded-3xl overflow-hidden">
+                  <div className="flex flex-col w-full md:w-[50dvw] lg:w-[35dvw] xl:w-[30dvw] h-[calc(100dvh-290px)] md:h-[55dvh] border rounded-3xl overflow-hidden">
                     {isSvg ? (
                       <div
                         className="flex-1 flex justify-center items-center p-2 overflow-auto h-full md:h-max animate-revealRight"

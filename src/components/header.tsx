@@ -23,7 +23,7 @@ const Header = () => {
 
   const languageOptions = [
     {
-      value: "pt",
+      value: "pt-BR",
       label: "Português",
       flag: "https://flagicons.lipis.dev/flags/4x3/br.svg",
     },
@@ -83,7 +83,7 @@ const Header = () => {
           </a>
 
           <Select
-            value={i18n.language || "pt"}
+            value={i18n.language}
             onValueChange={(val) => changeLanguage(val)}
           >
             <SelectTrigger className="w-[180px]">
