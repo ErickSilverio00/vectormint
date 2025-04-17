@@ -160,7 +160,7 @@ const Upload = () => {
                         <img
                           src={selectedImage}
                           alt="Imagem carregada"
-                          className="object-contain h-full w-full"
+                          className="object-cover sm:object-contain h-full w-full"
                         />
                       </div>
                     )}
@@ -168,73 +168,75 @@ const Upload = () => {
                 </div>
               )}
 
-              <div className="flex md:flex-col flex-rol gap-4 md:justify-start justify-between relative">
-                <div className="flex md:flex-row flex-col items-center gap-2 text-center">
-                  <label className="relative">
-                    <input
-                      ref={colorInputRef}
-                      type="color"
-                      value={fillColor}
-                      onChange={(e) => setFillColor(e.target.value)}
-                      className="absolute bottom-0 opacity-0 w-0 h-0"
-                    />
-                    <div
-                      className="p-4 w-max rounded-full border border-gray-200 flex items-center justify-center transition-colors hover:bg-accent/90 active:scale-95 cursor-pointer"
-                      onClick={() => colorInputRef.current?.click()}
+              <div className="flex md:flex-col flex-rol gap-4 md:justify-start justify-between w-full">
+                <div className="flex md:flex-col flex-row items-center justify-between gap-4 h-full w-full">
+                  <div className="flex md:flex-row flex-col items-center gap-2 text-center">
+                    <label className="relative">
+                      <input
+                        ref={colorInputRef}
+                        type="color"
+                        value={fillColor}
+                        onChange={(e) => setFillColor(e.target.value)}
+                        className="absolute bottom-0 opacity-0 w-0 h-0"
+                      />
+                      <div
+                        className="p-4 w-max rounded-full border border-gray-200 flex items-center justify-center transition-colors hover:bg-accent/90 active:scale-95 cursor-pointer"
+                        onClick={() => colorInputRef.current?.click()}
+                      >
+                        <Palette size={14.86} />
+                      </div>
+                    </label>
+                    <Label className="ml-0 md:ml-1 text-[10px] md:text-sm">
+                      {t("upload.button1")}
+                    </Label>
+                  </div>
+                  <div className="flex md:flex-row flex-col items-center gap-2 text-center">
+                    <Button
+                      variant="outline"
+                      className="rounded-full w-12 h-12"
+                      onClick={zoomIn}
+                      disabled={zoomLevel >= 2}
                     >
-                      <Palette size={14.86} />
-                    </div>
-                  </label>
-                  <Label className="ml-0 md:ml-1 text-[10px] md:text-sm">
-                    {t("upload.button1")}
-                  </Label>
+                      <Plus size={20} />
+                    </Button>
+                    <Label className="ml-0 md:ml-1 text-[10px] md:text-sm">
+                      {t("upload.button2")}
+                    </Label>
+                  </div>
+                  <div className="flex md:flex-row flex-col items-center gap-2 text-center">
+                    <Button
+                      variant="outline"
+                      className="rounded-full w-12 h-12"
+                      onClick={zoomOut}
+                      disabled={zoomLevel <= 0.5}
+                    >
+                      <Minus size={20} />
+                    </Button>
+                    <Label className="ml-0 md:ml-1 text-[10px] md:text-sm">
+                      {t("upload.button3")}
+                    </Label>
+                  </div>
+                  <div className="flex md:flex-row flex-col items-center gap-2 text-center">
+                    <Button
+                      variant="outline"
+                      className="rounded-full w-12 h-12"
+                      onClick={flipHorizontal}
+                    >
+                      <FlipHorizontal size={20} />
+                    </Button>
+                    <Label className="ml-0 md:ml-1 text-[10px] md:text-sm">
+                      {isSvg
+                        ? `${t("upload.button4Opt1")}`
+                        : `${t("upload.button4Opt2")}`}
+                    </Label>
+                  </div>
                 </div>
-                <div className="flex md:flex-row flex-col items-center gap-2 text-center">
+                <div className="hidden md:flex md:flex-row flex-col items-center gap-2">
                   <Button
-                    variant="outline"
-                    className="rounded-full w-12 h-12"
-                    onClick={zoomIn}
-                    disabled={zoomLevel >= 2}
-                  >
-                    <Plus size={20} />
-                  </Button>
-                  <Label className="ml-0 md:ml-1 text-[10px] md:text-sm">
-                    {t("upload.button2")}
-                  </Label>
-                </div>
-                <div className="flex md:flex-row flex-col items-center gap-2 text-center">
-                  <Button
-                    variant="outline"
-                    className="rounded-full w-12 h-12"
-                    onClick={zoomOut}
-                    disabled={zoomLevel <= 0.5}
-                  >
-                    <Minus size={20} />
-                  </Button>
-                  <Label className="ml-0 md:ml-1 text-[10px] md:text-sm">
-                    {t("upload.button3")}
-                  </Label>
-                </div>
-                <div className="flex md:flex-row flex-col items-center gap-2 text-center">
-                  <Button
-                    variant="outline"
-                    className="rounded-full w-12 h-12"
-                    onClick={flipHorizontal}
-                  >
-                    <FlipHorizontal size={20} />
-                  </Button>
-                  <Label className="ml-0 md:ml-1 text-[10px] md:text-sm">
-                    {isSvg
-                      ? `${t("upload.button4Opt1")}`
-                      : `${t("upload.button4Opt2")}`}
-                  </Label>
-                </div>
-                <div className="hidden md:flex md:flex-row flex-col items-center gap-2 md:absolute md:bottom-1">
-                  <Button
-                    className="w-max vector-button bg-green-500 hover:bg-green-600 text-white"
+                    className="w-auto vector-button bg-green-500 hover:bg-green-600 text-white"
                     onClick={handleDownload}
                   >
-                    <Download className="h-4 w-4" />
+                    <Download />
                     {t("upload.button6")}
                   </Button>
                 </div>
