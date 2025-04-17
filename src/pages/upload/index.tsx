@@ -1,6 +1,12 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import Header from "@/components/header";
 import { Button } from "@/components/ui/button";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
 import { Label } from "@/components/ui/label";
 import {
   Tooltip,
@@ -110,18 +116,29 @@ const Upload = () => {
                         {t("upload.button5")}
                       </Label>
                     </div>
-                    <div className="flex md:hidden flex-col gap-2 w-max items-center">
-                      <Button
-                        variant="outline"
-                        className="rounded-10 h-12 w-12 bg-green-500 text-white"
-                        onClick={handleDownload}
-                      >
-                        <Download />
-                      </Button>
-                      <Label className="ml-0 md:ml-1 text-[10px] md:text-sm">
-                        {t("upload.button6")}
-                      </Label>
-                    </div>
+                    <DropdownMenu>
+                      <DropdownMenuTrigger>
+                        <div className="flex md:hidden flex-col gap-2 w-max items-center">
+                          <Button
+                            variant="outline"
+                            className="rounded-10 h-12 w-12 bg-green-500 text-white"
+                          >
+                            <Download />
+                          </Button>
+                          <Label className="ml-0 md:ml-1 text-[10px] md:text-sm">
+                            {t("upload.button6")}
+                          </Label>
+                        </div>
+                      </DropdownMenuTrigger>
+                      <DropdownMenuContent>
+                        <DropdownMenuItem onClick={() => handleDownload("svg")}>
+                          SVG
+                        </DropdownMenuItem>
+                        <DropdownMenuItem onClick={() => handleDownload("png")}>
+                          PNG
+                        </DropdownMenuItem>
+                      </DropdownMenuContent>
+                    </DropdownMenu>
                   </div>
                   <div className="flex flex-col w-full md:w-[50dvw] lg:w-[35dvw] xl:w-[30dvw] h-[calc(100dvh-290px)] md:h-[55dvh] border rounded-3xl overflow-hidden">
                     {isSvg ? (
@@ -160,7 +177,7 @@ const Upload = () => {
                         <img
                           src={selectedImage}
                           alt="Imagem carregada"
-                          className="object-cover sm:object-contain h-full w-full"
+                          className="object-cover h-full w-full"
                         />
                       </div>
                     )}
@@ -232,13 +249,22 @@ const Upload = () => {
                   </div>
                 </div>
                 <div className="hidden md:flex md:flex-row flex-col items-center gap-2">
-                  <Button
-                    className="w-auto vector-button bg-green-500 hover:bg-green-600 text-white"
-                    onClick={handleDownload}
-                  >
-                    <Download />
-                    {t("upload.button6")}
-                  </Button>
+                  <DropdownMenu>
+                    <DropdownMenuTrigger>
+                      <Button className="w-auto vector-button bg-green-500 hover:bg-green-600 text-white">
+                        <Download />
+                        {t("upload.button6")}
+                      </Button>
+                    </DropdownMenuTrigger>
+                    <DropdownMenuContent>
+                      <DropdownMenuItem onClick={() => handleDownload("svg")}>
+                        SVG
+                      </DropdownMenuItem>
+                      <DropdownMenuItem onClick={() => handleDownload("png")}>
+                        PNG
+                      </DropdownMenuItem>
+                    </DropdownMenuContent>
+                  </DropdownMenu>
                 </div>
               </div>
             </div>

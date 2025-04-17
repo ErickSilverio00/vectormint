@@ -17,7 +17,7 @@ export interface UploadInterface {
   triggerFileInput: () => void;
   resetUploader: () => void;
   applyColorsToSvg: (rawSvg: string, fill: string) => string;
-  handleDownload: () => void;
+  handleDownload: (typeOfImage: "svg" | "png") => void;
   zoomIn: () => void;
   zoomOut: () => void;
   flipHorizontal: () => void;

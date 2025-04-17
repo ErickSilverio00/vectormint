@@ -140,25 +140,65 @@ export const UploadProvider = ({ children }: { children: ReactNode }) => {
     }, 100);
   };
 
-  const handleDownload = () => {
+  const handleDownload = async (format: "svg" | "png") => {
     if (!svgData) {
       toast.error(t("toasts.noSvg"));
       return;
     }
 
     const finalSvg = applyColorsToSvg(svgData, fillColor);
-    const blob = new Blob([finalSvg], { type: "image/svg+xml" });
-    const url = URL.createObjectURL(blob);
-    const a = document.createElement("a");
-    a.href = url;
-
     const cleanName = originalFileName?.replace(/\.[^/.]+$/, "") || "imagem";
-    a.download = `${cleanName}-vectormint.svg`;
 
-    document.body.appendChild(a);
-    a.click();
-    document.body.removeChild(a);
-    URL.revokeObjectURL(url);
+    if (format === "svg") {
+      const blob = new Blob([finalSvg], { type: "image/svg+xml" });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement("a");
+      a.href = url;
+      a.download = `${cleanName}-vectormint.svg`;
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+      URL.revokeObjectURL(url);
+    } else if (format === "png") {
+      const svgBlob = new Blob([finalSvg], { type: "image/svg+xml" });
+      const svgUrl = URL.createObjectURL(svgBlob);
+      const img = new Image();
+
+      img.onload = () => {
+        const canvas = document.createElement("canvas");
+        canvas.width = img.width;
+        canvas.height = img.height;
+        const ctx = canvas.getContext("2d");
+
+        if (!ctx) {
+          toast.error("Erro ao processar o canvas.");
+          return;
+        }
+
+        ctx.drawImage(img, 0, 0);
+        canvas.toBlob((blob) => {
+          if (blob) {
+            const pngUrl = URL.createObjectURL(blob);
+            const a = document.createElement("a");
+            a.href = pngUrl;
+            a.download = `${cleanName}-vectormint.png`;
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            URL.revokeObjectURL(pngUrl);
+          }
+        }, "image/png");
+
+        URL.revokeObjectURL(svgUrl);
+      };
+
+      img.onerror = () => {
+        toast.error("Erro ao carregar a imagem SVG para converter.");
+        URL.revokeObjectURL(svgUrl);
+      };
+
+      img.src = svgUrl;
+    }
   };
 
   const applyColorsToSvg = (rawSvg: string, fill: string) => {
