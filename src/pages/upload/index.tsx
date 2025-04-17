@@ -53,7 +53,7 @@ const Upload = () => {
     <div className="h-screen flex flex-col relative">
       <Header />
 
-      <main className="flex-1 mx-auto pt-4 sm:pt-10 p-4">
+      <main className="flex-1 md:mx-auto pt-4 md:pt-10 p-4">
         {!selectedImage ? (
           <div
             className={`relative border-2 border-dashed rounded-xl p-12 transition-colors cursor-pointer ${
@@ -97,36 +97,36 @@ const Upload = () => {
             <div className="flex flex-col md:flex-row gap-4">
               {coloredSvg && (
                 <div>
-                  <div className="flex sm:hidden mb-4 w-full justify-between">
-                    <div className="flex sm:hidden flex-col gap-2  w-max items-center">
+                  <div className="flex md:hidden mb-4 w-full justify-between">
+                    <div className="flex md:hidden flex-col gap-2 w-max items-center">
                       <Button
                         variant="outline"
-                        className="rounded-10 h-14 w-14"
+                        className="rounded-10 h-12 w-12"
                         onClick={resetUploader}
                       >
                         <Plus />
                       </Button>
-                      <Label className="ml-0 sm:ml-1 text-xs sm:text-sm">
+                      <Label className="ml-0 md:ml-1 text-[10px] md:text-sm">
                         {t("upload.button5")}
                       </Label>
                     </div>
-                    <div className="flex sm:hidden flex-col gap-2 w-max items-center">
+                    <div className="flex md:hidden flex-col gap-2 w-max items-center">
                       <Button
                         variant="outline"
-                        className="rounded-10 h-14 w-14 bg-green-500 text-white"
+                        className="rounded-10 h-12 w-12 bg-green-500 text-white"
                         onClick={handleDownload}
                       >
                         <Download />
                       </Button>
-                      <Label className="ml-0 sm:ml-1 text-xs sm:text-sm">
+                      <Label className="ml-0 md:ml-1 text-[10px] md:text-sm">
                         {t("upload.button6")}
                       </Label>
                     </div>
                   </div>
-                  <div className="flex flex-col sm:w-[344px] w-full h-[344px] border rounded-3xl overflow-hidden">
-                    {isSvg && (
+                  <div className="flex flex-col w-full md:w-[50dvw] lg:w-[35dvw] xl:w-[30dvw] h-[calc(100dvh-280px)] md:h-[55dvh] border rounded-3xl overflow-hidden">
+                    {isSvg ? (
                       <div
-                        className="flex-1 flex justify-center items-center p-2 overflow-auto animate-revealRight"
+                        className="flex-1 flex justify-center items-center p-2 overflow-auto h-full md:h-max animate-revealRight"
                         style={{
                           backgroundImage: `linear-gradient(45deg, #f8f9f9 25%, transparent 25%), linear-gradient(-45deg, #f8f9f9 25%, transparent 25%), linear-gradient(45deg, transparent 75%, #f8f9f9 75%), linear-gradient(-45deg, transparent 75%, #f8f9f9 75%)`,
                           backgroundSize: "20px 20px",
@@ -134,23 +134,22 @@ const Upload = () => {
                             "0 0, 0 10px, 10px -10px, -10px 0px",
                         }}
                       >
-                        <div className="w-[324px] h-[324px] relative overflow-hidden">
+                        <div className="w-full h-full relative overflow-hidden">
                           <div
-                            className="absolute inset-0 transition-transform duration-200 ease-in-out"
+                            className="inset-0 transition-transform duration-200 ease-in-out h-full"
                             style={{
                               transform: `scale(${zoomLevel})`,
                               transformOrigin: "center",
                             }}
                           >
                             <div
-                              className="[&>svg]:w-full [&>svg]:h-full [&>svg]:object-contain"
+                              className="h-full [&>svg]:w-full [&>svg]:h-full [&>svg]:object-contain"
                               dangerouslySetInnerHTML={{ __html: coloredSvg }}
                             />
                           </div>
                         </div>
                       </div>
-                    )}
-                    {!isSvg && (
+                    ) : (
                       <div
                         style={{
                           transform: `scale(${zoomLevel})`,
@@ -168,8 +167,8 @@ const Upload = () => {
                 </div>
               )}
 
-              <div className="flex sm:flex-col flex-rol gap-4 sm:justify-start justify-between relative">
-                <div className="flex sm:flex-row flex-col items-center gap-2 text-center">
+              <div className="flex md:flex-col flex-rol gap-4 md:justify-start justify-between relative">
+                <div className="flex md:flex-row flex-col items-center gap-2 text-center">
                   <label className="relative">
                     <input
                       ref={colorInputRef}
@@ -185,11 +184,11 @@ const Upload = () => {
                       <Palette size={14.86} />
                     </div>
                   </label>
-                  <Label className="ml-0 sm:ml-1 text-xs sm:text-sm">
+                  <Label className="ml-0 md:ml-1 text-[10px] md:text-sm">
                     {t("upload.button1")}
                   </Label>
                 </div>
-                <div className="flex sm:flex-row flex-col items-center gap-2 text-center">
+                <div className="flex md:flex-row flex-col items-center gap-2 text-center">
                   <Button
                     variant="outline"
                     className="rounded-full w-12 h-12"
@@ -198,11 +197,11 @@ const Upload = () => {
                   >
                     <Plus size={20} />
                   </Button>
-                  <Label className="ml-0 sm:ml-1 text-xs sm:text-sm">
+                  <Label className="ml-0 md:ml-1 text-[10px] md:text-sm">
                     {t("upload.button2")}
                   </Label>
                 </div>
-                <div className="flex sm:flex-row flex-col items-center gap-2 text-center">
+                <div className="flex md:flex-row flex-col items-center gap-2 text-center">
                   <Button
                     variant="outline"
                     className="rounded-full w-12 h-12"
@@ -211,11 +210,11 @@ const Upload = () => {
                   >
                     <Minus size={20} />
                   </Button>
-                  <Label className="ml-0 sm:ml-1 text-xs sm:text-sm">
+                  <Label className="ml-0 md:ml-1 text-[10px] md:text-sm">
                     {t("upload.button3")}
                   </Label>
                 </div>
-                <div className="flex sm:flex-row flex-col items-center gap-2 text-center">
+                <div className="flex md:flex-row flex-col items-center gap-2 text-center">
                   <Button
                     variant="outline"
                     className="rounded-full w-12 h-12"
@@ -223,13 +222,13 @@ const Upload = () => {
                   >
                     <FlipHorizontal size={20} />
                   </Button>
-                  <Label className="ml-0 sm:ml-1 text-xs sm:text-sm">
+                  <Label className="ml-0 md:ml-1 text-[10px] md:text-sm">
                     {isSvg
                       ? `${t("upload.button4Opt1")}`
                       : `${t("upload.button4Opt2")}`}
                   </Label>
                 </div>
-                <div className="hidden sm:flex sm:flex-row flex-col items-center gap-2 sm:absolute sm:bottom-1">
+                <div className="hidden md:flex md:flex-row flex-col items-center gap-2 md:absolute md:bottom-1">
                   <Button
                     className="w-max vector-button bg-green-500 hover:bg-green-600 text-white"
                     onClick={handleDownload}
@@ -244,7 +243,7 @@ const Upload = () => {
         )}
       </main>
 
-      <footer className="absolute bottom-6 left-8 hidden sm:flex">
+      <footer className="absolute bottom-6 left-8 hidden md:flex">
         <Tooltip>
           <TooltipTrigger>
             <Button

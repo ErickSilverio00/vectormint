@@ -56,8 +56,8 @@
         "button1": "Color del SVG",
         "button2": "Acercar",
         "button3": "Alejar",
-        "button4Opt1": "Ver Imagen Original",
-        "button4Opt2": "Ver SVG Generado",
+        "button4Opt1": "Ver Original",
+        "button4Opt2": "Ver SVG",
         "button5": "Nueva Imagen",
         "button6": "Descargar SVG"
     },
