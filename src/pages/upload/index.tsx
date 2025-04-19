@@ -56,7 +56,7 @@ const Upload = () => {
   }, [svgData, fillColor]);
 
   return (
-    <div className="h-screen flex flex-col relative">
+    <div className="h-screen flex flex-col relative overflow-hidden">
       <Header />
 
       <main className="flex-1 md:mx-auto pt-4 md:pt-10 p-4">
@@ -116,29 +116,6 @@ const Upload = () => {
                         {t("upload.button5")}
                       </Label>
                     </div>
-                    <DropdownMenu>
-                      <DropdownMenuTrigger>
-                        <div className="flex md:hidden flex-col gap-2 w-max items-center">
-                          <Button
-                            variant="outline"
-                            className="rounded-10 h-12 w-12 bg-green-500 text-white"
-                          >
-                            <Download />
-                          </Button>
-                          <Label className="ml-0 md:ml-1 text-[10px] md:text-sm">
-                            {t("upload.button6")}
-                          </Label>
-                        </div>
-                      </DropdownMenuTrigger>
-                      <DropdownMenuContent>
-                        <DropdownMenuItem onClick={() => handleDownload("svg")}>
-                          SVG
-                        </DropdownMenuItem>
-                        <DropdownMenuItem onClick={() => handleDownload("png")}>
-                          PNG
-                        </DropdownMenuItem>
-                      </DropdownMenuContent>
-                    </DropdownMenu>
                   </div>
                   <div className="flex flex-col w-full md:w-[50dvw] lg:w-[35dvw] xl:w-[30dvw] h-[calc(100dvh-290px)] md:h-[55dvh] border rounded-3xl overflow-hidden">
                     {isSvg ? (
@@ -187,6 +164,31 @@ const Upload = () => {
 
               <div className="flex md:flex-col flex-rol gap-4 md:justify-start justify-between w-full">
                 <div className="flex md:flex-col flex-row md:justify-start justify-between gap-4 h-full w-full">
+                  <div className="flex md:flex-row flex-col items-center gap-2 text-center">
+                    <DropdownMenu>
+                      <DropdownMenuTrigger>
+                        <div className="flex md:hidden flex-col gap-2 w-max items-center">
+                          <Button
+                            variant="outline"
+                            className="rounded-full h-12 w-12 bg-green-500 text-white"
+                          >
+                            <Download />
+                          </Button>
+                          <Label className="ml-0 md:ml-1 text-[10px] md:text-sm">
+                            {t("upload.button6")}
+                          </Label>
+                        </div>
+                      </DropdownMenuTrigger>
+                      <DropdownMenuContent>
+                        <DropdownMenuItem onClick={() => handleDownload("svg")}>
+                          SVG
+                        </DropdownMenuItem>
+                        <DropdownMenuItem onClick={() => handleDownload("png")}>
+                          PNG
+                        </DropdownMenuItem>
+                      </DropdownMenuContent>
+                    </DropdownMenu>
+                  </div>
                   <div className="flex md:flex-row flex-col items-center gap-2 text-center">
                     <label className="relative">
                       <input
