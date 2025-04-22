@@ -101,6 +101,12 @@ Feel free to submit translations or improve the existing ones through our GitHub
 
 ---
 
+## 📄 License
+
+This project is licensed under the **MIT License**. See the [LICENSE](./LICENSE.md) file for more information.
+
+---
+
 ## 👾 Issues
 
 If you encounter any bugs or have suggestions for improvements, please open an issue in the [GitHub Issues](https://github.com/ErickSilverio00/vectormint/issues) section.
