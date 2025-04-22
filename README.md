@@ -2,7 +2,7 @@
 
 Transform raster images into clean, scalable SVGs — remove backgrounds, adjust colors, and optimize logos with ease.
 
-![Vectormint Demo](./demo.gif)
+![Vectormint Demo](./public/screenshot.png)
 
 ## 🚀 Features
 
