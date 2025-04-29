@@ -118,7 +118,7 @@ If you encounter any bugs or have suggestions for improvements, please open an i
 Follow me for updates, tips, and tutorials:
 
 - **Twitter:** [@ericksilverio00](https://twitter.com/ericksilverio00)
-- **LinkedIn:** [Erick Silvério](https://www.linkedin.com/in/erick-silv%C3%A9rio-024576248/)
+- **LinkedIn:** [Erick Silvério](https://www.linkedin.com/in/ericksilverio/)
 
 ---
 
